@@ -1,0 +1,25 @@
+package:
+  name: condatest
+  version: 1.3
+
+source:
+  path: .
+
+#build:
+#  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  build:
+    - setuptools
+
+  host:
+    - python
+    - numpy x.x
+
+  run:
+    - python
+    - numpy x.x
+
+#test:
+#  imports:
+#    - main
