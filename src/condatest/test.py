@@ -6,8 +6,6 @@
 
 import math
 
-__version__ = '1.0'
-
 
 def do_something():
     print("This is a TEST on how to build conda packages.")
