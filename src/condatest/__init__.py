@@ -4,7 +4,7 @@
 # file: __init__.py
 # created: 29.01.2020
 
-__version__ = '1.7'
+__version__ = '1.8'
 
 from .test import do_something
 from .another import Different
