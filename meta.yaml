@@ -4,7 +4,7 @@ package:
 
 source:
   git_url: https://github.com/MarkusFraKS/condatest.git
-  git_rev: "v1.8"
+  git_rev: "v1.9"
 #  path: .
 
 build:
@@ -16,16 +16,14 @@ build:
 requirements:
   build:
     - setuptools
-    - python {{ python }}
-    - numpy {{ numpy }}
 
   host:
-    - python {{ python }}
-    - {{ pin_compatible('numpy', max_pin='x.x') }}
+    - python
+    - numpy >=1.17
 
   run:
-    - python {{ python }}
-    - {{ pin_compatible('numpy', max_pin='x.x') }}
+    - python
+    - numpy >=1.17
 
 about:
   doc_url: file://./doc/docs.html
