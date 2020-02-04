@@ -9,22 +9,23 @@ source:
 
 build:
   noarch: python
-
+  string: np{{ numpy | replace(".", "") }}py{{ python | replace(".", "") }}
 #build:
 #  script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
     - setuptools
-    - python {{python}}
+    - python {{ python }}
+    - numpy {{ numpy }}
 
   host:
-    - python
-    - numpy >=1.17
+    - python {{ python }}
+    - {{ pin_compatible('numpy', max_pin='x.x') }}
 
   run:
-    - python
-    - numpy >=1.17
+    - python {{ python }}
+    - {{ pin_compatible('numpy', max_pin='x.x') }}
 
 about:
   doc_url: file://./doc/docs.html
