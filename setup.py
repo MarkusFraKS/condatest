@@ -5,7 +5,7 @@ with open('README.md', mode='r') as f:
 
 setup(
     name='condatest',
-    version='1.5',
+    version='1.7',
 
     package_dir={"": "src"},
     packages=find_packages(where="src"),

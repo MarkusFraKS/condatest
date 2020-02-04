@@ -1,6 +1,6 @@
 package:
   name: condatest
-  version: "1.5"
+  version: "1.7"
 
 source:
 #  git_url: https://github.com/MarkusFraKS/condatest.git
@@ -14,11 +14,11 @@ requirements:
     - setuptools
 
   host:
-    - python
+    - python ">=3.6"
     - numpy x.x
 
   run:
-    - python
+    - python ">=3.6"
     - numpy x.x
 
 about:
