@@ -1,6 +1,6 @@
 package:
   name: condatest
-  version: "1.7"
+  version: https://github.com/MarkusFraKS/condatest/releases
 
 source:
   git_url: https://github.com/MarkusFraKS/condatest.git
