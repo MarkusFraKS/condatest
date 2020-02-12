@@ -33,7 +33,7 @@ requirements:
 
 about:
   home: https://github.com/MarkusFraKS/condatest.git
-  license: BSD
+  license: MIT
   license_file: LICENSE
   doc_url: /doc/docs.html
 
