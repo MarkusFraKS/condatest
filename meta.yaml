@@ -1,34 +1,44 @@
+{% set setuppy = load_setup_py_data() %}
+
 package:
   name: condatest
-  version: {{GIT_DESCRIBE_TAG | replace("v", "")}}
-
+#  version: {{GIT_DESCRIBE_TAG | replace("v", "")}}
+#  version: "2.5"
+  version: {{ setuppy.get('version') }}
 source:
-  git_url: https://github.com/MarkusFraKS/condatest.git
-  git_rev: "v2.1"
-#  path: .
+#  git_url: https://github.com/MarkusFraKS/condatest.git
+#  git_rev: "v2.3"
+  path: .
 
 build:
-  number: 0
-  noarch: python
+  number: 1
+#  noarch: python
 #  string: np{{ numpy | replace(".", "") }}py{{ python | replace(".", "") }}
 #build:
-#  script: python setup.py install --single-version-externally-managed --record=record.txt
+#  script: python setup.py install
 
 requirements:
   build:
+    - python {{ python }}
+    - numpy {{ numpy }}
     - setuptools
 
   host:
-    - python
-    - numpy x.x
+    - python {{ python }}
+    - numpy {{ numpy }}
 
   run:
-    - python
-    - numpy x.x
+    - python {{ python }}
+    - numpy {{ numpy }}
 
 about:
-  doc_url: file://./doc/docs.html
+  home: https://github.com/MarkusFraKS/condatest.git
+  license: BSD
+  license_file: LICENSE
+  doc_url: /doc/docs.html
 
 test:
   imports:
     - condatest
+
+

@@ -11,7 +11,7 @@ class Different:
 
     def huhu(self):
         print("This is a method of a class in another module")
-        print("Try using numy:")
+        print("Try using numpy:")
         print("Pi is approx.: {}".format(np.pi))
 
 
